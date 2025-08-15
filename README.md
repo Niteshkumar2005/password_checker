@@ -4,6 +4,11 @@ A Python tool that checks the strength of passwords, detects common weak passwor
 It also includes a secure password generator for creating strong passwords instantly.
 
 ---
+## 📷 Screenshots
+> Demo UI preview (replace with your own real screenshot later):
+![Password Checker Demo](.\images\1.png)
+
+---
 
 ## 🚀 Features
 - ✅ Secure password input (hidden from screen)
