@@ -5,7 +5,7 @@ It also includes a secure password generator for creating strong passwords insta
 
 ---
 ## 📷 Screenshots
-> Demo UI preview (replace with your own real screenshot later):
+> Demo UI preview :
 ![Password Checker Demo](images/1.png)
 
 ---
