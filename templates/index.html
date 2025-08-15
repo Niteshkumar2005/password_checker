@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Strength Checker</title>
+    <style>
+        body { font-family: Arial; background: #f4f4f4; text-align: center; padding: 20px; }
+        .box { background: white; padding: 20px; border-radius: 8px; width: 400px; margin: auto; box-shadow: 0px 0px 10px #ccc; }
+        input { padding: 10px; width: 90%; margin-bottom: 10px; }
+        button { padding: 10px 20px; background: blue; color: white; border: none; cursor: pointer; }
+        .score { font-size: 20px; font-weight: bold; }
+        .suggestions { text-align: left; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>🔒 Password Strength Checker</h1>
+        <form method="POST">
+            <input type="password" name="password" placeholder="Enter your password" required>
+            <br>
+            <button type="submit">Check Strength</button>
+        </form>
+
+        {% if result %}
+            <hr>
+            <p class="score">Strength: {{ result.percentage }}%</p>
+            <p>Length: {{ result.length }} characters</p>
+            <p>Lowercase: {{ result.lower }}</p>
+            <p>Uppercase: {{ result.upper }}</p>
+            <p>Numbers: {{ result.numbers }}</p>
+            <p>Whitespace: {{ result.whitespace }}</p>
+            <p>Special Characters: {{ result.special }}</p>
+            {% if result.suggestions %}
+                <div class="suggestions">
+                    <h3>Suggestions:</h3>
+                    <ul>
+                        {% for s in result.suggestions %}
+                            <li>{{ s }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>
